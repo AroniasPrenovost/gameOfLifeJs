@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang='en-us'>
+
+<head>
+	<meta charset='utf-8'>
+	<title>Conway's Game of Life</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel='stylesheet' type='text/css' href='src/css/styles.css'>
+</head>
+
+<body>
+
+	<div id='wrapper'>
+		<div id='container'>
+
+			<h1>Conway's Game of Life</h1>
+
+			<h3>The Rules</h3>
+			<p>
+				<strong>For a space that is 'populated':</strong>
+			</p>
+			<ul>
+				<li>Each cell with one or no neighbors dies, as if by solitude.</li>
+				<li>Each cell with four or more neighbors dies, as if by overpopulation.</li>
+				<li>Each cell with two or three neighbors survives.</li>
+				<li>Each cell with two or three neighbors survives.</li>
+				<li>Each cell with two or three neighbors survives.</li>
+			</ul>
+			<p>
+				<strong>For a space that is 'empty' or 'unpopulated':</strong>
+			</p>
+			<ul>
+				<li>Each cell with three neighbors becomes populated.</li>
+			</ul>
+
+			<p><strong>Note:</strong><br>- all
+				dead cells that would become living don't count as living at the
+				current turn<br>- all living cells that would die don't count as
+				dead at the current turn</p>
+			<h3>The Controls</h3>
+
+			<ul>
+				<li>Choose a figure from the pull-down menu or make one yourself by clicking on the cells with a mouse.</li>
+
+				<li>A new generation of cells (corresponding to one iteration of the rules) is initiated by the 'Next' button.
+				</li>
+				<li>The 'Start' button advances the game by several generations.</li>
+				<li>Game speed is regulated by the speed dial and the size of the cells with the size dial.</li>
+			</ul>
+
+			<div id='myDynamicTable'>
+				<!-- table -->
+			</div>
+
+			<br>
+			<div class='slidecontainer'>
+
+				<!-- pattern selection -->
+				<label for='patterns'>Choose a pattern:</label>
+				<select id='patterns'>
+					<option value="glider">Glider</option>
+					<option value="small-exploder">Small Exploder</option>
+					<option value="exploder">Exploder</option>
+					<option value="10-cell-row" selected>10-Cell Row</option>
+					<option value="lightweight-spaceship">Lightweight Spaceship</option>
+					<option value="tumbler">Tumbler</option>
+					<option value="gosper-glider-gun">Gosper Glider Gun</option>
+				</select>
+
+				<!-- sliders -->
+				<div class='sliders'>
+					<label for='sizeRangeSlider'>Adjust size</label>
+					<input type='range' id='sizeRangeSlider' name='sizeRangeSlider' min='0' max='10' value='0' step='1'>
+					<label for='speedRangeSlider'>Adjust speed</label>
+					<input type='range' id='speedRangeSlider' name='speedRangeSlider' min='0' max='900' value='300' step='100'>
+				</div>
+
+				<!-- count generations -->
+				<div class='counter'>
+					<p>Iterations: <span id='timerOutput'>0</span></p>
+				</div>
+
+				<!-- start, top, count++ -->
+				<div id='controls'>
+					<button id='startPause'>START</button>
+					<button id='resetTimer'>RESET</button>
+					<button id='incrementTimer'>INCREMENT</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='dist/bundle.js'></script>
+</body>
+
+</html>
