@@ -4,6 +4,9 @@
 <head>
 	<meta charset='utf-8'>
 	<title>Conway's Game of Life</title>
+  <meta name='description' content=''>
+  <meta name='keywords' content=''>
+  <meta name='author' content=''>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link rel='stylesheet' type='text/css' href='src/css/styles.css'>
 </head>
@@ -29,14 +32,11 @@
 			</p>
 			<ul>
 				<li>Each cell with three neighbors becomes populated.</li>
+				<li>Dead cells that would become living don't count as living at the current turn</li>
+				<li>Living cells that would die don't count as dead at the current turn</li>
 			</ul>
 
-			<p><strong>Note:</strong><br>- all
-				dead cells that would become living don't count as living at the
-				current turn<br>- all living cells that would die don't count as
-				dead at the current turn</p>
 			<h3>The Controls</h3>
-
 			<ul>
 				<li>Choose a figure from the pull-down menu or make one yourself by clicking on the cells with a mouse.</li>
 

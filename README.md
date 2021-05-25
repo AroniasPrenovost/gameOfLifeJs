@@ -13,18 +13,16 @@ npm start
 
 ## Rules
 
+For a space that is 'populated':
 ```
-populated cells 
+- Each cell with one or no neighbors dies, as if by solitude. 
+- Each cell with four or more neighbors dies, as if by overpopulation. 
+- Each cell with two or three neighbors survives. 
 ```
-Each cell with one or no neighbors dies, as if by solitude. 
-Each cell with four or more neighbors dies, as if by overpopulation. 
-Each cell with two or three neighbors survives. 
 
+For a space that is 'empty' or 'unpopulated':
 ```
-unpopulated cells
+- Each cell with three neighbors becomes populated
+- Dead cells that would become living don't count as living at the current turn
+- Living cells that would die don't count as dead at the current turn
 ```
-Each cell with three neighbors becomes populated
-
-It's important to note that all dead cells that would become living 
-don't count as living at the current turn, and all living cells that would 
-die don't count as dead at the current turn.

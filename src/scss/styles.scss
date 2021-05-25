@@ -1,29 +1,28 @@
+$background: #ecf0f1;
+$table_cell: #95a5a6; 
+$green: #4CAF50; 
 
 body { 
-  background-color: 
-  #ecf0f1; 
+  background-color: $background; 
   width: 100%; 
   margin: 0; 
   padding: 0; 
   font-size:14px;
+  overflow-x: hidden;
 }
 
 #wrapper { 
-  clear: left; 
-  float: left; 
   position: relative; 
-  left: 50%; 
+  margin: 5%;
 }
 
 #container { 
   display: block; 
-  float: left; 
   position: relative; 
-  right: 50%; 
 }
 
 .cell {
-	background-color: #95a5a6; 
+	background-color: $table_cell; 
 }
 
 table {
@@ -35,7 +34,7 @@ table {
 
 td {
 	background-color: none;
-	border:1px solid white;
+	border:1px solid $background;
 	vertical-align: bottom;
 	padding: 0 0 0 0;
 }
@@ -94,14 +93,14 @@ input#sizeRangeSlider, #speedRangeSlider {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #4CAF50;
+  background: $green;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #4CAF50;
+  background: $green;
   cursor: pointer;
 }
 
