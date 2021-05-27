@@ -11,25 +11,14 @@ body {
   overflow-x: hidden;
 }
 
-#wrapper { 
-  position: relative; 
-  margin: 5%;
-}
-
-#container { 
-  display: block; 
-  position: relative; 
-}
-
-.cell {
-	background-color: $table_cell; 
+.wrapper { 
+  display: flex;
+  justify-content: center;
 }
 
 table {
 	border: none;
-	width: auto; 
-  background-color: transparent;
-  width: -moz-available; 
+  width: 100%;
 }
 
 td {
@@ -56,56 +45,48 @@ table, th, td {
   border: 1px solid transparent;
 }
 
+.cell {
+	background-color: $table_cell; 
+}
+
 /* controls */ 
 
-.slidecontainer {
-  position: relative;
+.controls-container {
   width: 100%;
   height: auto;
+  background-color: #34495e;
+  color: $background;
 }
 
-.sliders {
-  width:80%; 
-  display: inline-block;
+.inner {
+  padding: 22px;
 }
 
-input#sizeRangeSlider, #speedRangeSlider {
-  width: 90px;
+#patterns, input#sizeRangeSlider, #speedRangeSlider {
+  width: 18%;
   vertical-align: middle;
 }
 
-.slider {
-  -webkit-appearance: none;
-  width: 50%;
-  height: 25px;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+p {
+  margin: 10px 0 0 0; 
+  padding: 0;
 }
 
-.slider:hover {
-  opacity: 1;
+button {
+  color: $background !important;
+	text-transform: uppercase;
+	background: #60a3bc;
+	padding: 5px;
+	border-radius: 10px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+  font-size: 10px; 
+  margin: 2px;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: $green;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: $green;
-  cursor: pointer;
-}
-
-.counter {
-  width:18%; 
-  display: inline-block;
-  text-align: right;
+button:hover {
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
 }

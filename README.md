@@ -22,7 +22,7 @@ For a space that is 'populated':
 
 For a space that is 'empty' or 'unpopulated':
 ```
-- Each cell with three neighbors becomes populated
-- Dead cells that would become living don't count as living at the current turn
-- Living cells that would die don't count as dead at the current turn
+- Each cell with three neighbors becomes populated.
+- Dead cells that would become living don't count as living at the current turn.
+- Living cells that would die don't count as dead at the current turn.
 ```
