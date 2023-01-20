@@ -5,10 +5,7 @@ Revamping an old repo to do something new, inspired by this implementation seen 
 ## Installation 
 
 ```sh
-npm install 
-```
-```sh
-npm start
+npm install && npm start
 ```
 
 ## Rules
